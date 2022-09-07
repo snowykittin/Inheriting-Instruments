@@ -60,10 +60,4 @@ function playNext(){
     }else{
        currentInstrument++; 
     }
-    
-    //this.activatedCallback();
-}
-
-for(let i = 0; i < 2; i++){
-    this.activatedCallback = this.playNext;
 }

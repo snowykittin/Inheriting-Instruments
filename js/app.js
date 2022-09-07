@@ -16,6 +16,7 @@ class Instruments{
     synth = new Tone.Synth().toDestination();
     over(){
         this.synth.triggerRelease(0, duration);
+        setTimeout(this.over, duration);
         this.activatedCallback();
     }
     playSound(duration){
@@ -52,6 +53,11 @@ let drum = new Percussion("80 db");
 
 var instrumentArray = [flute, violin, drum];
 
+/*for(let i = 0; i < instrumentArray.length; i++){
+    instrumentArray[i].playSound(0.5);
+}
+
+*/
 
 function playNext(){
     instrumentArray[currentInstrument].playSound(0.5);
